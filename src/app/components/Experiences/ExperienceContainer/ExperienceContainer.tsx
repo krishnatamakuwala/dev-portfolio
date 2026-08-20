@@ -22,6 +22,7 @@ const ExperienceContainer = ({ experience }: { experience: IExperience }) => (
             )}
 
             <h3>{experience.name}</h3>
+            <i>{experience.location}</i>
             <h5>{experience.role}</h5>
             <i>{experience.startDate} - {experience.endDate ?? 'current'}</i>
         </div>

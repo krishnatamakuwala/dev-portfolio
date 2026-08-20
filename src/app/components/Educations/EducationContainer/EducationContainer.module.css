@@ -1,0 +1,65 @@
+.education {
+    padding: 2em;
+    margin: 0 auto 2em auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
+    display: flex;
+    flex-direction: column;
+    column-gap: 3em;
+    width: 100%;
+}
+
+.educationItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.education:hover {
+    transform: translateY(-7px);
+}
+
+.educationDescription {
+    margin-top: 1em;
+    text-align: justify;
+    width: 100%
+}
+
+.educationDescriptionList {
+    list-style: disc;
+}
+
+.educationStack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.2em 0;
+}
+
+.educationStackItem {
+    margin: 0.5em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--clr-fg-alt);
+}
+
+.educationDescriptionItem {
+    margin: 0.5em;
+}
+
+.education .linkIcon {
+    margin-left: 0.5em;
+}
+
+@media (max-width: 600px) {
+    .education {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+
+    .educationDescription {
+        width: 100%;
+    }
+}

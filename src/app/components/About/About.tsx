@@ -52,6 +52,7 @@ const About = () => {
                                 aria-label='github'
                                 style={{ marginRight: '0.8em' }}
                                 className={`${styles.link} ${styles.linkIcon}`}
+                                title='GitHub'
                             >
                                 <GitHub />
                             </Link>
@@ -63,6 +64,7 @@ const About = () => {
                                 aria-label='linkedin'
                                 style={{ marginRight: '0.8em' }}
                                 className={`${styles.link} ${styles.linkIcon}`}
+                                title='LinkedIn'
                             >
                                 <LinkedIn />
                             </Link>

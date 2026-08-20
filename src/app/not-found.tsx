@@ -15,17 +15,17 @@ export default function NotFound() {
         <div style={{ display: 'flex', flexDirection: 'column', height: '100dvh' }} className={`${theme} ${styles.page}`}>
             <Header />
 
-            <main style={{ flexGrow: 1 }} className={styles.main}>
-                <h2 className="text-6xl font-bold text-gray-900 dark:text-white mb-4">
+            <main style={{ flexGrow: 1 }} className={`${styles.main} ${styles.notFound}`}>
+                <h2>
                     404
                 </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-400 mb-8">
+                <p>
                     Oops! The page you are looking for does not exist.
                 </p>
-                <br />
                 <Link
                     href="/"
-                    className="rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition-colors hover:bg-blue-700"
+                    className={`${styles.link} ${styles.linkNav}`}
+                    title="Return to portfolio"
                 >
                     Return to Portfolio
                 </Link>

@@ -7,18 +7,6 @@
     margin-left: 1.5em;
 }
 
-.navHamburger {
-    display: none;
-}
-
-.navTheme {
-    margin-top: 0.4em;
-    font-size: 1.5em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 @media (max-width: 600px) {
     .navList {
         display: none;
@@ -42,15 +30,5 @@
 
     .navListItem {
         margin: 0.5em 0;
-    }
-
-    .navHamburger {
-        display: flex;
-        z-index: 2;
-        margin-left: 0.8em;
-        margin-top: 0.4em;
-        font-size: 1.5em;
-        justify-content: center;
-        align-items: center;
     }
 }

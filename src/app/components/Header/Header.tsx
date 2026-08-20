@@ -2,7 +2,6 @@ import { header } from '../../portfolio';
 import Navbar from '../Navbar/Navbar';
 import styles from '@/app/page.module.css';
 import headerStyles from './Header.module.css';
-import Link from 'next/link';
 
 const Header = () => {
     return (
@@ -10,9 +9,9 @@ const Header = () => {
             <meta name="apple-mobile-web-app-title" content="Krishna Tamakuwala | Portfolio" />
             <h3>
                 {header.homepage ? (
-                    <Link href={header.homepage} className={styles.link}>
+                    <a href={header.homepage} className={styles.link}>
                         {header.title}
-                    </Link>
+                    </a>
                 ) : (
                     header.title
                 )}

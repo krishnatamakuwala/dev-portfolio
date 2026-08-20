@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./contexts/ThemeContext";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import { CssBaseline } from "@mui/material";
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v16-appRouter";
+import { CssBaseline, GlobalStyles } from "@mui/material";
 import GoogleAnalytics from "./utilities/GoogleAnalytics";
 
 const poppins = Poppins({
@@ -27,6 +27,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <html lang="en" className={`${poppins.variable}`} data-scroll-behavior="smooth">
             <body>
                 <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+                    <GlobalStyles styles="@layer mui, custom;" />
                     <ThemeProvider>
                         <CssBaseline />
                         <GoogleAnalytics />

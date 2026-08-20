@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useThemeContext } from '../../contexts/ThemeContext';
-import { projects, skills, contact, experiences } from '../../portfolio';
+import { projects, skills, contact, experiences, educations } from '../../portfolio';
 import { Brightness2, Close, Menu, WbSunnyRounded } from '@mui/icons-material';
 import styles from '@/app/page.module.css';
 import navbarStyles from './Navbar.module.css';
@@ -19,12 +19,28 @@ const Navbar = () => {
             <ul
                 className={`${navbarStyles.navList} ${showNavList ? navbarStyles.show : navbarStyles.hide}`}
             >
+                {educations.length ? (
+                    <li className={navbarStyles.navListItem}>
+                        <Link
+                            href='/#educations'
+                            onClick={toggleNavList}
+                            className={`${styles.link} ${styles.linkNav}`}
+                            prefetch={false}
+                            title='Educations'
+                        >
+                            Educations
+                        </Link>
+                    </li>
+                ) : null}
+
                 {experiences.length ? (
                     <li className={navbarStyles.navListItem}>
                         <Link
                             href='/#experiences'
                             onClick={toggleNavList}
                             className={`${styles.link} ${styles.linkNav}`}
+                            prefetch={false}
+                            title='Experiences'
                         >
                             Experiences
                         </Link>
@@ -37,6 +53,8 @@ const Navbar = () => {
                             href='/#projects'
                             onClick={toggleNavList}
                             className={`${styles.link} ${styles.linkNav}`}
+                            prefetch={false}
+                            title='Projects'
                         >
                             Projects
                         </Link>
@@ -49,6 +67,8 @@ const Navbar = () => {
                             href='/#skills'
                             onClick={toggleNavList}
                             className={`${styles.link} ${styles.linkNav}`}
+                            prefetch={false}
+                            title='Skills'
                         >
                             Skills
                         </Link>
@@ -61,6 +81,8 @@ const Navbar = () => {
                             href='/#contact'
                             onClick={toggleNavList}
                             className={`${styles.link} ${styles.linkNav}`}
+                            prefetch={false}
+                            title='Contact'
                         >
                             Contact
                         </Link>
@@ -70,16 +92,18 @@ const Navbar = () => {
 
             <button
                 onClick={toggleTheme}
-                className={`${styles.btn} ${styles.btnIcon} ${navbarStyles.navTheme}`}
+                className={`${styles.btn} ${styles.btnIcon} ${styles.navTheme}`}
                 aria-label='toggle theme'
+                title='Toggle theme'
             >
                 {themeName === 'dark' ? <WbSunnyRounded /> : <Brightness2 />}
             </button>
 
             <button
                 onClick={toggleNavList}
-                className={`${styles.btn} ${styles.btnIcon} ${navbarStyles.navHamburger}`}
+                className={`${styles.btn} ${styles.btnIcon} ${styles.navHamburger}`}
                 aria-label='toggle navigation'
+                title='Toggle navigation'
             >
                 {showNavList ? <Close /> : <Menu />}
             </button>
