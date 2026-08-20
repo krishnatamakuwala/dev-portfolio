@@ -1,0 +1,69 @@
+.about {
+  flex-direction: column;
+  margin-top: 3em;
+}
+
+.aboutName {
+  color: var(--clr-primary);
+}
+
+.aboutRole {
+  margin-top: 1.2em;
+}
+
+.aboutDesc {
+  font-size: 1rem;
+  max-width: 600px;
+}
+
+.aboutDesc,
+.aboutContact {
+  margin-top: 2.4em;
+}
+
+.aboutContact {
+  width: 100%;
+  justify-content: center;
+  display: flex;
+}
+
+.about .linkIcon {
+  margin-right: 0.8em;
+}
+
+.about .btnOutline {
+  margin-right: 1em;
+}
+
+@media (max-width: 600px) {
+  .app .about {
+    align-items: flex-start;
+    margin-top: 2em;
+  }
+}
+
+.aboutHeader {
+  display: flex;
+  align-items: center;
+  gap: 3rem; /* space between picture and text */
+  margin-bottom: 1.5rem;
+}
+
+.aboutPicture {
+  width: 180px;
+  height: 180px;
+  border-radius: 70%;   /* round profile */
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.aboutIntro {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 600px) {
+  .aboutHeader {
+    flex-direction: column;
+  }
+}
