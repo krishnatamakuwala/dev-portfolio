@@ -1,4 +1,3 @@
-'use strict';
 'use client';
 
 import { useEffect } from 'react';
@@ -29,6 +28,7 @@ export const sendGAEvent = ({ action, category, label, value }: GAEvent) => {
             category,
             label,
             value,
+            transport: 'beacon',
         });
     }
 };
