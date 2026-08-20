@@ -49,6 +49,7 @@ const ProjectContainer = ({ project }: { project: IProject }) => (
                     aria-label='source code'
                     style={{ marginLeft: '0.5em' }}
                     className={`${styles.link} ${styles.linkIcon}`}
+                    title='View source code'
                 >
                     <GitHub />
                 </Link>
@@ -60,6 +61,7 @@ const ProjectContainer = ({ project }: { project: IProject }) => (
                     aria-label='live preview'
                     style={{ marginLeft: '0.5em' }}
                     className={`${styles.link} ${styles.linkIcon}`}
+                    title='View live preview'
                 >
                     <Launch />
                 </Link>

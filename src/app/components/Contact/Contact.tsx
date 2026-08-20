@@ -3,7 +3,6 @@
 import { contact } from '../../portfolio';
 import styles from '@/app/page.module.css';
 import contactStyles from './Contact.module.css'
-import Link from 'next/link';
 import { sendGAEvent } from '@/app/utilities/GoogleAnalytics';
 
 const Contact = () => {
@@ -20,11 +19,11 @@ const Contact = () => {
     return (
         <section className={`${styles.section} ${contactStyles.contact} ${styles.center}`} id='contact'>
             <h2 className={styles.sectionTitle}>Contact</h2>
-            <Link href={`mailto:${contact.email}`} onClick={handleEmailClick}>
+            <a href={`mailto:${contact.email}`} onClick={handleEmailClick} title='Email me'>
                 <button className={`${styles.btn} ${styles.btnOutline}`}>
                     Email me
                 </button>
-            </Link>
+            </a>
         </section>
     )
 }

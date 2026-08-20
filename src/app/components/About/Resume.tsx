@@ -1,6 +1,5 @@
 'use client';
 
-import Link from "next/link";
 import styles from '@/app/page.module.css';
 import { sendGAEvent } from "@/app/utilities/GoogleAnalytics";
 
@@ -15,16 +14,17 @@ export const Resume = ({ resume }: { resume: string }) => {
     }
 
     return (
-        <Link
+        <a
             href={resume.startsWith('http')
                 ? resume
                 : `/files/${resume}`
             }
             onClick={handleResumeClick}
+            title='Download or view resume'
         >
             <button style={{ marginRight: '1em' }} className={`${styles.btn} ${styles.btnOutline}`}>
                 Resume
             </button>
-        </Link>
+        </a>
     )
 }

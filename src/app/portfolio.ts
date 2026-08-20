@@ -18,9 +18,36 @@ const about: IAbout = {
     },
 }
 
+const educations: IEducation[] = [
+    // educations can be added an removed
+    // if there are no educations, Educations section won't show up
+    {
+        name: 'Master of Information Technology',
+        location: 'Whitecliffe College, New Zealand',
+        startDate: 'November 2024',
+        endDate: 'April 2026',
+        description: [
+            'Core Focus: Cybersecurity, Cloud Infrastructure, Data Analysis, and Information Security Standards',
+        ],
+        image: 'whitecliffe.jpg',
+        imageClipped: true
+    },
+    {
+        name: 'Bachelor of Computer Science',
+        location: 'Gujarat Technological University, India',
+        startDate: 'July 2019',
+        endDate: 'May 2023',
+        description: [
+            'Core Focus: Software Development (.NET C#, Java, JavaScript), Databases, Networking, Data Science, and Machine Learning',
+        ],
+        image: 'gtu.png',
+        imageClipped: true
+    },
+]
+
 const experiences: IExperience[] = [
-    // projects can be added an removed
-    // if there are no projects, Projects section won't show up
+    // experiences can be added an removed
+    // if there are no experiences, Experiences section won't show up
     {
         name: 'Casepoint Pvt. Ltd.',
         role: 'Software Developer',
@@ -36,7 +63,7 @@ const experiences: IExperience[] = [
             'Participated in Agile Scrum, peer code reviews, and CI/CD pipelines via Azure DevOps; diagnosed and resolved production incidents across distributed systems.',
 
         ],
-        stack: ['.NET C#', 'PostgreSQL', 'Redis', 'RabbitMQ', 'ElasticSearch', 'Azure DevOps', 'HTML', 'CSS', 'Kendo UI', 'CI/CD', 'TDD', 'Unit Testing', 'OWASP'],
+        stack: ['.NET C#', 'PostgreSQL', 'Redis', 'RabbitMQ', 'ElasticSearch', 'Azure DevOps', 'HTML', 'CSS', 'Kendo UI', 'CI/CD', 'TDD', 'Unit Testing', 'OWASP', 'SDLC'],
         image: 'casepoint.avif',
         imageClipped: true
     },
@@ -63,7 +90,7 @@ const projects: IProject[] = [
         name: 'C# Debug Visualizer',
         description: [
             'Designed and published a developer tool that visualises complex C# data structures during debugging sessions, filling a gap in the VS Code ecosystem and trusted and downloaded 5000+ times.',
-            'Migrated the codebase from JavaScript to TypeScript, improving execution performance by 113%.'
+            'Migrated the codebase from JavaScript to TypeScript and changed variable fetching architecture, improving execution performance by 113%.'
         ],
         stack: ['TypeScript', 'VS Code API', 'HTML', 'CSS', 'GitHub Actions'],
         sourceCode: 'https://github.com/krishnatamakuwala/csharp-debug-visualizer',
@@ -77,32 +104,35 @@ const projects: IProject[] = [
             'Built a managed preprocessing service for Machine Learning teams. You submit a dataset, select your steps, get back clean data. No infrastructure to manage.',
             'Implemented distributed message-driven architecture using RabbitMQ and Redis; services containerised with Docker and deployed independently.',
             'Integrated ELK Stack for centralised logging and real-time monitoring of agent health, job status, and system throughput.',
-            'Designed end-to-end authentication and authorisation across services.'
+            'Designed end-to-end authentication and authorisation across services.',
+            'Finalizing pre-launch preparations.'
         ],
         stack: ['Node.js', 'Next.js', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Docker', '.NET Background Services', 'ELK Stack', 'S3', 'Cloud', 'CI/CD', 'Material UI'],
-        sourceCode: 'https://github.com/krishnatamakuwala/qustart',
-        livePreview: 'https://orchflow.io',
+        sourceCode: null,
+        livePreview: null,
         image: 'orchflow.png',
         imageClipped: false
     },
     {
         name: 'Dev Portfolio',
         description: [
-            'Designed and published a developer tool that visualises complex C# data structures during debugging sessions, filling a gap in the VS Code ecosystem.', 'Migrated the codebase from JavaScript to TypeScript, improving execution performance by 113%'
+            'A simple, responsive, and minimal portfolio for a developers to showcase their work experience, projects, education and achievements.',
+            'Built in Next.js to serve server-side rendered pages (SSR) to get better SEO ranking, and hosted on cloudflare pages via GitHub actions on every push to main branch.'
         ],
-        stack: ['Node.js', 'HTML', 'CSS'],
-        sourceCode: 'https://github.com/krishnatamakuwala/photographer-portpholio/tree/v1.0.0_main_changes',
-        livePreview: 'https://anil-chauhan-photography.onrender.com/',
-        image: 'acp.png',
+        stack: ['Next.js', 'CSS', 'GitHub Actions', 'CI/CD', 'Cloudflare Hosting', 'SSR', 'SEO'],
+        sourceCode: 'https://github.com/krishnatamakuwala/dev-portfolio',
+        livePreview: 'https://krishnatamakuwala.com/',
+        image: 'dev-portfolio.png',
         imageClipped: true
     },
     {
         name: 'Anil Chauhan Photography',
         description: [
-            'Designed and published a developer tool that visualises complex C# data structures during debugging sessions, filling a gap in the VS Code ecosystem.',
-            'Migrated the codebase from JavaScript to TypeScript, improving execution performance by 113%.'
+            'Designed and published a portfolio website for a client to showcase their passion and dedication towards photography.',
+            'Built in simple HTML, CSS, and JavaScript and used GSAP for smooth animations.',
+            'Served all images dynamically from Cloudinary storage via backend Node.js API.'
         ],
-        stack: ['Node.js', 'HTML', 'CSS'],
+        stack: ['Node.js', 'Cloudinary', 'HTML', 'CSS', 'GSAP'],
         sourceCode: 'https://github.com/krishnatamakuwala/photographer-portpholio/tree/v1.0.0_main_changes',
         livePreview: 'https://anil-chauhan-photography.onrender.com/',
         image: 'acp.png',
@@ -173,6 +203,8 @@ const skills: string[] = [
     'Clean Code',
     'Secure Coding',
     'Agile',
+    'SDLC',
+    'OWASP',
 
     // Other
     'Python',
@@ -185,8 +217,7 @@ const contact: IContact = {
     email: 'krishna.piyush.tamakuwala@gmail.com',
 }
 
-export { header, about, experiences, projects, skills, contact }
-
+export { header, about, educations, experiences, projects, skills, contact }
 
 export interface IExperience {
     name: string;
@@ -196,6 +227,16 @@ export interface IExperience {
     endDate: string | null;
     description: string[];
     stack: string[];
+    image: string | null;
+    imageClipped: boolean;
+}
+
+export interface IEducation {
+    name: string;
+    location: string;
+    startDate: string;
+    endDate: string | null;
+    description: string[];
     image: string | null;
     imageClipped: boolean;
 }

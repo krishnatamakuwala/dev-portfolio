@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import footerStyles from './Footer.module.css';
 
 const Footer = () => (
     <footer className={footerStyles.footer}>
-        <p>&copy; {new Date().getFullYear()} Krishna Tamakuwala. Code released under the 
-            <Link href="LICENSE.md" target="_blank" rel="noopener noreferrer">MIT License</Link>.</p>
+        <p>&copy; {new Date().getFullYear()} Krishna Tamakuwala. Code released under the <a href="/LICENSE.md" target="_blank" rel="noopener noreferrer" title='MIT license'>MIT License</a>.</p>
     </footer>
 )
 
