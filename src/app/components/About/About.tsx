@@ -4,9 +4,10 @@ import Image from 'next/image';
 import styles from '@/app/page.module.css';
 import aboutStyles from './About.module.css';
 import Link from 'next/link';
+import { Resume } from './Resume';
 
 const About = () => {
-    const { name, role, description, resume, social, picture } = about
+    const { name, role, description, resume, social, picture } = about;
 
     return (
         <div className={`${aboutStyles.about} ${styles.center}`}>
@@ -18,7 +19,6 @@ const About = () => {
                                 ? picture
                                 : `/images/${picture}`
                         }
-                        // fill
                         width={50}
                         height={50}
                         sizes='50vw'
@@ -41,16 +41,7 @@ const About = () => {
 
             <div className={`${aboutStyles.aboutContact} ${styles.center}`}>
                 {resume && (
-                    <Link
-                        href={resume.startsWith('http')
-                            ? resume
-                            : `/files/${resume}`
-                        }
-                    >
-                        <button style={{ marginRight: '1em' }} className={`${styles.btn} ${styles.btnOutline}`}>
-                            Resume
-                        </button>
-                    </Link>
+                    <Resume resume={resume}/>
                 )}
 
                 {social && (

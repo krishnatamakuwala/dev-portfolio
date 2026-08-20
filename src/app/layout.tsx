@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "./contexts/ThemeContext";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { CssBaseline } from "@mui/material";
+import GoogleAnalytics from "./utilities/GoogleAnalytics";
 
 const poppins = Poppins({
     variable: "--font-poppins",
@@ -28,6 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
                 <AppRouterCacheProvider options={{ enableCssLayer: true }}>
                     <ThemeProvider>
                         <CssBaseline />
+                        <GoogleAnalytics />
                         {children}
                     </ThemeProvider>
                 </AppRouterCacheProvider>
