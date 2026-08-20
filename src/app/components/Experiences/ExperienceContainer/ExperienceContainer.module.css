@@ -1,0 +1,65 @@
+.experience {
+    padding: 2em;
+    margin: 0 auto 2em auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
+    display: flex;
+    flex-direction: row;
+    column-gap: 3em;
+    width: 100%;
+}
+
+.experienceCompany {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1em;
+}
+
+.experience:hover {
+    transform: translateY(-7px);
+}
+
+.experienceDescription {
+    margin-top: 1em;
+    text-align: justify;
+    width: 70%
+}
+
+.experienceDescriptionList {
+    list-style: disc;
+}
+
+.experienceStack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.2em 0;
+}
+
+.experienceStackItem {
+    margin: 0.5em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--clr-fg-alt);
+}
+
+.experienceDescriptionItem {
+    margin: 0.5em;
+}
+
+.experience .linkIcon {
+    margin-left: 0.5em;
+}
+
+@media (max-width: 600px) {
+    .experience {
+        flex-direction: column;
+        row-gap: 1em;
+    }
+
+    .experienceDescription {
+        width: 100%;
+    }
+}

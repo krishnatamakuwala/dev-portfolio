@@ -1,0 +1,51 @@
+.project {
+    padding: 2em;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.projectImgContainer {
+    margin-bottom: 2em;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+}
+
+.projectDescription {
+    margin-top: 1em;
+}
+
+.projectStack {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1.2em 0;
+}
+
+.projectStackItem {
+    margin: 0.5em;
+    font-weight: 500;
+    font-size: 0.8rem;
+    color: var(--clr-fg-alt);
+}
+
+.projectDescriptionItem {
+    margin: 0.5em;
+}
+
+.projectLinkContainer {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+
+.project .linkIcon {
+    margin-left: 0.5em;
+}
