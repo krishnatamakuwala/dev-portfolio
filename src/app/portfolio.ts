@@ -1,13 +1,13 @@
 const header: IHeader = {
     // all the properties are optional - can be left empty or deleted
-    homepage: 'https://github.com/krishnatamakuwala',
+    homepage: '/',
     title: 'KT.',
 }
 
 const about: IAbout = {
     // all the properties are optional - can be left empty or deleted
     name: 'Krishna Tamakuwala',
-    role: 'Software Engineer - Distributed Systems',
+    role: 'Software Developer - Distributed Systems',
     picture: 'krishna.jpg',
     description:
         'Recent Master of Information Technology graduate from Whitecliffe College, with prior commercial experience building distributed backend systems in a production environment. Looking for a graduate or early-career software engineering role in New Zealand where I can contribute technically, keep learning, and grow with a team over the long term.',
