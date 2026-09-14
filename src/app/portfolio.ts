@@ -107,11 +107,11 @@ const projects: IProject[] = [
             'Designed end-to-end authentication and authorisation across services.',
             'Finalizing pre-launch preparations.'
         ],
-        stack: ['Node.js', 'Next.js', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Docker', '.NET Background Services', 'ELK Stack', 'S3', 'Cloud', 'CI/CD', 'Material UI'],
+        stack: ['Node.js', 'Next.js', 'PostgreSQL', 'Redis', 'RabbitMQ', 'Docker', '.NET Background Services', 'ELK Stack', 'S3', 'Cloud', 'CI/CD', 'Material UI', 'Linux'],
         sourceCode: null,
-        livePreview: null,
+        livePreview: 'https://orchflow.io',
         image: 'orchflow.png',
-        imageClipped: false
+        imageClipped: true
     },
     {
         name: 'Dev Portfolio',
@@ -123,6 +123,19 @@ const projects: IProject[] = [
         sourceCode: 'https://github.com/krishnatamakuwala/dev-portfolio',
         livePreview: 'https://krishnatamakuwala.com/',
         image: 'dev-portfolio.png',
+        imageClipped: true
+    },
+    {
+        name: 'baby-elephant-orm',
+        description: [
+            'It is a custom build object relationship management(ORM) package for PostgreSQL, which improves code readability, and code re-usability.',
+            'It is easy to use and can support multiple types of conditions and various joins.',
+            'Currently working on transaction queries to ensure data integrity and consistency.'
+        ],
+        stack: ['TypeScript', 'PostgreSQL', 'NPM'],
+        sourceCode: 'https://github.com/krishnatamakuwala/baby-elephant-orm',
+        livePreview: 'https://www.npmjs.com/package/baby-elephant-orm',
+        image: 'baby-elephant-orm.png',
         imageClipped: true
     },
     {
